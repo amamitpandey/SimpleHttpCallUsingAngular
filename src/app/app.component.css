@@ -1,0 +1,128 @@
+
+.prentContainer {
+    background: #e6e6e6;
+    padding: 8px;
+    margin: 0;
+}
+.firstGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 20px;
+}
+.filterContainer {
+    background: white;
+    padding: 16px;
+    border-radius: 3px;
+}
+.yearDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.launchDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.landDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.buttonStyle {
+    background-color: #bfff80;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+.activeButton {
+    background-color: #66cc00
+}
+.itemsDiv {
+    background: white;
+    border-radius: 4px;
+    max-height: 450px;
+    max-width: 225px;
+}
+.imgClass {
+    max-width: 90%;
+    max-height: 200px;
+    background: lightgrey;
+    margin: 9px;
+}
+.itemsDiv-1 {
+    padding: 0px 10px 10px;
+}
+.itemsGridDiv {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #e6e6e6;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.itemTitle {
+    color: #3366ff;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.itemItems {
+    font-weight: bolder;
+    font-size: 14px;
+    margin-bottom: 2px;
+
+}
+.itemItems-1 {
+    color: #3366ff;
+    font-weight: 200;
+}
+p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: gray;
+}
+.underLine {
+    height: 1px;
+    background-color: lightgray;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 4px;
+}
+.marginh4 {
+    margin: 0;
+}
+.classFontBold {
+    font-weight: bold;
+}
+.devCont{
+    padding: 16px;
+    font-size: 20px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 715px) {
+    body {
+        margin: 0px;
+    }
+    .firstGrid {
+        grid-template-columns: 100%;
+    }
+    .itemsGridDiv {
+        grid-template-columns: 100%;
+        padding: 0px;
+    }
+    .itemsDiv {
+        margin: auto;
+    }
+
+    .filterContainer {
+    width: 188px;
+    max-width: 225px;
+    margin: auto;
+    }
+    .marginAuto{
+        margin: auto;
+        text-align: center;
+    }
+    
+}

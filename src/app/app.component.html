@@ -1,0 +1,47 @@
+<app-loader></app-loader>
+<div class="prentContainer">
+  <div>
+    <h3 class="marginAuto" >SpaceX Launch Programs</h3>
+  </div>
+  <div class="firstGrid">
+    <div class="filterContainer">
+      <h4 class="marginh4"> Filters</h4>
+      <p>Lunch Year</p>
+      <div class="underLine"></div>
+      <div class="yearDiv">
+        <div *ngFor="let obj of years; let index = index " class="buttonContainer">
+          <button class="buttonStyle" [id]="'year' + index " (click)="onFilter('year', obj, index)">{{ obj }}</button>
+        </div>
+      </div>
+      <p>Successful Launch</p>
+      <div class="underLine"></div>
+      <div class="launchDiv">
+        <div *ngFor="let obj of varCond ; let index = index ">
+          <button class="buttonStyle" [id]="'Launch' + index "
+            (click)="onFilter('Launch', obj, index)">{{ obj }}</button>
+        </div>
+      </div>
+      <p>Successful Landing</p>
+      <div class="underLine"></div>
+      <div class="landDiv">
+        <div *ngFor="let obj of varCond ; let index = index ">
+          <button class="buttonStyle" [id]="'Land' + index " (click)="onFilter('Land', obj, index)">{{ obj }}</button>
+        </div>
+      </div>
+    </div>
+    <div class="itemsGridDiv">
+      <div *ngIf = " satLocData.length == 0" class="marginAuto" > No Data Available</div>
+      <div class="itemsDiv" *ngFor = " let obj of satLocData; let index = index ">
+        <img src={{obj.links.mission_patch}} class="imgClass">
+        <div class="itemsDiv-1">
+          <div class="itemTitle">{{ obj.mission_name }} #{{ index }}</div>
+          <div class="itemItems">Mission Ids : <span class="itemItems-1"> {{ obj.mission_id }} </span> </div>
+          <div  class="itemItems" >Launch Year : <span class="itemItems-1">{{ obj.launch_year }}</span> </div>
+          <div  class="itemItems" >Successful Launch : <span class="itemItems-1">{{ obj.launch_success }}</span> </div>
+          <div  class="itemItems" >Successful Landing : <span class="itemItems-1">{{ obj.rocket.first_stage.cores[0].land_success }}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="devCont"> <span class="classFontBold" >Developer By :</span> Amit Pandey</div>
+</div>
